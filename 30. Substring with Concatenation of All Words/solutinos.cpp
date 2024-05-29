@@ -5,7 +5,7 @@ class Solution {
             int slen = s.length(); // get the string length
             int len = slen - n * words.size(); // get the remaining length
             unordered_map<string, int> mp; // store all the words into map
-            vector<int> ans; // store the index into the vector
+            vector<int> ans; // to store the index
 
             for (int i = 0; i < words.size(); i++) ++mp[words[i]]; // get all the words and store them
 
@@ -22,7 +22,7 @@ class Solution {
                         string t = s.substr(j, n); // get the substring
                         if(mp.find(t) != mp.end()) ++smp[t]; // find in the new created map
                         else {  // did not find
-                            flag = 0;  // flag 
+                            flag = 0;  // flag
                             break; // discontinue the for loop
                         }
                     }
