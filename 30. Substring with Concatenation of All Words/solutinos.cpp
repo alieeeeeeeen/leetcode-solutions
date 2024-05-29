@@ -12,21 +12,21 @@ class Solution {
 
             for (int i = 0; i < len; i++) { // for loop till the length is less than the remaining
 
-                string st = s.substr(i, n);
-                if(mp.find(st) != mp.end()) {
-                    unordered_map<string, int> smp;
-                    ++smp[st];
-                    int flag = 1;
+                string st = s.substr(i, n); // get the substring of the string
+                if(mp.find(st) != mp.end()) { // find the substring in the map
+                    unordered_map<string, int> smp; // create new map
+                    ++smp[st]; // record the word once
+                    int flag = 1; // flag
 
-                    for (int j = i + n, k = 1; k < words.size() && j + n <= slen; k++, j = j + n) {
-                        string t = s.substr(j, n);
-                        if(mp.find(t) != mp.end()) ++smp[t];
-                        else {
-                            flag = 0;
-                            break;
+                    for (int j = i + n, k = 1; k < words.size() && j + n <= slen; k++, j = j + n) { // from the position to the position + word's size, find other words
+                        string t = s.substr(j, n); // get the substring
+                        if(mp.find(t) != mp.end()) ++smp[t]; // find in the new created map
+                        else {  // did not find
+                            flag = 0;  // flag 
+                            break; // discontinue the for loop
                         }
                     }
-                    if(flag && smp == mp) ans.push_back(i);
+                    if(flag && smp == mp) ans.push_back(i); // store the index in the vector
                 }
             }
            return ans;
