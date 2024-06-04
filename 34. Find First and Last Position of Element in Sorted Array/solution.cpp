@@ -3,7 +3,7 @@ public:
     vector<int> searchRange(vector<int>& nums, int target) {
         int begin = lowerBound(nums, target); // find the lowerBound
         int end = upperBound(nums, target); // find the upperBound`
-        if (begin < nums.size() && nums[begin] == target) { // if begin not reach the end of vector and begin equal to the target
+        if (begin < nums.size() && nums[begin] == target) { // if begin not reach the end of vector and begin equals to the target
             return {begin, end - 1}; // return from the begin to the end - 1
         }
         return {-1, -1}; // return {-1, -1};
