@@ -17,7 +17,7 @@ private:
             const auto mid = left + (right - left) / 2; // find the mid
             if (nums[mid] >= target) { // mid not less than the target
                 right = mid - 1; // move right to the mid - 1
-            } else { 
+            } else {
                 left = mid + 1; // move left to the mid + 1
             }
         }
