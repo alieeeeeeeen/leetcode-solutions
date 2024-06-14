@@ -21,12 +21,6 @@ private:
             combination(candidates, target, i, currSum, currComb, res); // recursive the current element, since the same number may be chosen
             currComb.pop_back(); // the element does not match, so pop up the element from the vector
             currSum -= candidates[i]; // subtract the element from the sum
-            /**
-             * [2,3,5] 7
-             * 
-             * 2,        2        3
-             * sum = 2   sum = 4 sum = 7 
-             */
         }
     }
 
