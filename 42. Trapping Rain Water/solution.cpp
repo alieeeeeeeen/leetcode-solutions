@@ -18,16 +18,15 @@ public:
             }
         }
         return res;
-
     }
 };
 
 
 /**
- *                  |
- *      |           |
- *   |  |           |
- * | |  |    |  |   |
+ *                   |
+ *       |           |
+ *    |  |           |
+ * |  |  |    |  |   |
  * --------------------
  * 
  * the maxLeft is the element at the position 0, the maxRight is the element at the last position
