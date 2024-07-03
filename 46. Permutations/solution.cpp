@@ -15,7 +15,7 @@ public:
 
         for(int j = i; j <= n; j++) { // bottom-up from the base case
             swap(nums[i], nums[j]); // swap
-            per(i + 1, n, nums, res); // recursive
+            per(i + 1, n, nums, res); // recursive for the next element
             swap(nums[i], nums[j]); // backtracking
         }
     }
