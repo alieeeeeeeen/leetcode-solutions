@@ -17,7 +17,6 @@ public:
         permute(count_map, path, ans);
 
         return ans;
-
     }
 
 private:
@@ -32,7 +31,7 @@ private:
                 path.push_back(i->first);
                 i->second--;
                 permute(count_map, path, ans);
-                path.pop_back();
+                path.pop_back(); // backtracking
                 i->second++;
             }
         }
