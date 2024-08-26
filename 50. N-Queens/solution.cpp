@@ -5,7 +5,7 @@ private:
         int r = row;
         int c = col;
 
-        while(row >=0 && col >=0) {
+        while(row >=0 && col >=0) { // upper left diagonal
             if (board[row][col] == 'Q') return false;
             row--;
             col--;
@@ -13,14 +13,14 @@ private:
 
         row = r;
         col = c;
-        while(col >=0) {
+        while(col >=0) { // left
             if(board[row][col] == 'Q') return false;
             col--;
         }
 
         row = r;
         col = c;
-        while( row < n && col >= 0) {
+        while( row < n && col >= 0) { // bottom left diagonal
             if (board[row][col] == 'Q') return false;
             row++;
             col--;
