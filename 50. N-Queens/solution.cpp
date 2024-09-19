@@ -1,10 +1,10 @@
 class Solution {
-
 private:
     bool isSafe(vector<string> board, int row, int col, int n) {
         int r = row;
         int c = col;
 
+        // only check the left side
         while(row >=0 && col >=0) { // upper left diagonal
             if (board[row][col] == 'Q') return false;
             row--;
