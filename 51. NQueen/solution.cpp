@@ -1,6 +1,6 @@
 class Solution {
 private:
-int queen[9];
+int queen[9]; // store the col
 
 
 // In order to get the number of solutions, it would be better to store the coordinates instead of the whole board
